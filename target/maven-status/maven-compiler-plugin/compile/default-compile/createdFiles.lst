@@ -1,0 +1,10 @@
+me\cyro\rootcore\commands\TutorialCommand.class
+me\cyro\rootcore\Rootcore.class
+me\cyro\rootcore\LeaderboardManager.class
+me\cyro\rootcore\commands\ReloadCommand.class
+me\cyro\rootcore\listeners\LeaveListener.class
+me\cyro\rootcore\commands\AutocompCommand.class
+me\cyro\rootcore\listeners\AutoPickupListener.class
+me\cyro\rootcore\listeners\ChatFilterListener.class
+me\cyro\rootcore\listeners\JoinListener.class
+me\cyro\rootcore\commands\LobbyCommand.class
