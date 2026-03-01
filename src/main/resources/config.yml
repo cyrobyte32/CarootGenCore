@@ -4,6 +4,6 @@ pluginprefix: "§x§F§C§A§A§5§C§lʀ§x§F§C§A§F§5§C§lᴏ§x§F§C§B
 antispamdelay: 1000
 
 # normal users cant use these words
+# expand this list to block more individual words.
 filteredWords:
-  - 'nigger'
-  - 'nigga'
+  - 'example'
