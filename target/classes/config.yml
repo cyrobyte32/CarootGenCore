@@ -1,9 +1,0 @@
-pluginprefix: "§x§F§C§A§A§5§C§lʀ§x§F§C§A§F§5§C§lᴏ§x§F§C§B§5§5§C§lᴏ§x§F§C§B§A§5§C§lᴛ§x§F§C§C§0§5§C§lᴄ§x§F§C§C§5§5§C§lᴏ§x§F§C§C§B§5§C§lʀ§x§F§C§D§0§5§C§lᴇ §r§6▶ §r"
-
-# in MS; how long should normal users wait per chat message
-antispamdelay: 1000
-
-# normal users cant use these words
-filteredWords:
-  - 'nigger'
-  - 'nigga'
