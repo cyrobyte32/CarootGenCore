@@ -10,6 +10,9 @@ public class TutorialCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings) {
 
+        // Simple Tutorial Command
+        // Allows players to view tutorial for Rootcore's Game modes
+
         if(commandSender instanceof Player p) {
 
             String prefix = "§x§F§C§A§A§5§C§lʀ§x§F§C§A§F§5§C§lᴏ§x§F§C§B§5§5§C§lᴏ§x§F§C§B§A§5§C§lᴛ§x§F§C§C§0§5§C§lᴄ§x§F§C§C§5§5§C§lᴏ§x§F§C§C§B§5§C§lʀ§x§F§C§D§0§5§C§lᴇ §r§6▶ §r";

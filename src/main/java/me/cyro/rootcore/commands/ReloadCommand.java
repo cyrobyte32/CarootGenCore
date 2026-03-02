@@ -11,6 +11,8 @@ public class ReloadCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings) {
 
+        // Basic Helper command, allows reload of the plugin without requiring a restart.
+
         if(commandSender instanceof Player p) {
             if(p.hasPermission("rootcore.admin")) {
                 Rootcore.getPlugin().reloadConfig();

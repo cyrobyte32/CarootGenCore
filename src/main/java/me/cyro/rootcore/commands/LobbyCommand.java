@@ -11,6 +11,8 @@ public class LobbyCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings) {
 
+        // Convenient command to allow players to teleport to the Server Lobby
+
         if(commandSender instanceof Player p) {
 
             if(strings.length > 0) {
@@ -25,7 +27,7 @@ public class LobbyCommand implements CommandExecutor {
 
             p.teleport(Bukkit.getWorld("lobby").getSpawnLocation());
             p.sendMessage("§x§F§C§A§A§5§C§lʀ§x§F§C§A§F§5§C§lᴏ§x§F§C§B§5§5§C§lᴏ§x§F§C§B§A§5§C§lᴛ§x§F§C§C§0§5§C§lᴄ§x§F§C§C§5§5§C§lᴏ§x§F§C§C§B§5§C§lʀ§x§F§C§D§0§5§C§lᴇ §r§6▶ §r"
-            +"§aSent you to the Lobby.");
+            +"§aSent you to the Lobby."); // Looks like: ROOTCORE ▶ Sent you to the Lobby.
 
         }
 

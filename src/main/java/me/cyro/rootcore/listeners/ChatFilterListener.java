@@ -10,6 +10,11 @@ import java.util.List;
 
 public class ChatFilterListener implements Listener {
 
+    /*
+    This listener is responsible for stopping non-admin players from using words in the blocked words list.
+    The listener cancels the chat event and logs the attempt to the Server Console and Logs
+     */
+
     @EventHandler
     public void onPlayerChat(AsyncPlayerChatEvent e) {
 

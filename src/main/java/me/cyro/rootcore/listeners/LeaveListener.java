@@ -7,6 +7,10 @@ import org.bukkit.event.player.PlayerQuitEvent;
 
 public class LeaveListener implements Listener {
 
+    /*
+    Simple Custom Leave Message
+     */
+
     @EventHandler
     public void onPlayerQuit(PlayerQuitEvent e) {
 

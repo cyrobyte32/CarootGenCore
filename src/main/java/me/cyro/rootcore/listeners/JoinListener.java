@@ -14,6 +14,10 @@ public class JoinListener implements Listener {
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent e) {
 
+        /*
+        Simple Custom Join Message
+         */
+
         Player p = e.getPlayer();
         p.teleport(Bukkit.getWorld("lobby").getSpawnLocation());
         p.removePotionEffect(PotionEffectType.JUMP_BOOST);

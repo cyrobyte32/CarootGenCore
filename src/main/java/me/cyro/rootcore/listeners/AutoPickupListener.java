@@ -16,6 +16,13 @@ import java.util.Map;
 
 public class AutoPickupListener implements Listener {
 
+    /*
+    This Listener is responsible for the Auto-Pickup feature and implementing the Auto compress recipes.
+    The Auto Pickup Feature adds drops from broken blocks directly to a players inventory and prevents the drops.
+    The Auto Compress Feature automatically uses set recipes to automatically convert a set amount of an item into a new item.
+     */
+
+
     // Set priority to HIGHEST to ensure other plugins (like world guard) don't conflict
     @EventHandler(priority = EventPriority.HIGHEST, ignoreCancelled = true)
     public void onBlockBreak(BlockBreakEvent e) {

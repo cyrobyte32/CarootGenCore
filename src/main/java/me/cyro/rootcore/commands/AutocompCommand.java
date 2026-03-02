@@ -11,13 +11,21 @@ import org.bukkit.inventory.ItemStack;
 
 public class AutocompCommand implements CommandExecutor {
 
+    /*
+    Auto Compressing is a feature of the GENS gamemode.
+    Auto Compress Recipes allow to automatically turn a set amount of an Item into its 'Compressed' Variant
+    This command allows admins to manage said recipes
+     */
+
+
+
     @Override
     public boolean onCommand(CommandSender sender, Command command, String s, String[] args) {
         Rootcore plugin = Rootcore.getPlugin();
 
         if (!(sender instanceof Player p)) return true;
 
-        if(!p.getWorld().getName().equals("void")) {
+        if(!p.getWorld().getName().equals("void")) { // World void = Gens Game mode
             p.sendMessage("§eThis command can not be used from your current context. Go to the gens world to modify auto comps.");
         }
 

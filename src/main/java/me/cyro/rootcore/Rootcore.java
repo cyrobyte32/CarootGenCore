@@ -27,15 +27,15 @@ public final class Rootcore extends JavaPlugin implements CommandExecutor {
 
     @Override
     public void onEnable() {
-        // 1. Initialize Config
+        // initialize Config
         saveDefaultConfig();
 
         plugin = this;
 
-        // 2. Initialize Manager
+        // Initialize Manager
         this.lbManager = new LeaderboardManager();
 
-        // 3. Register Listeners & Commands
+        // Register Listeners & Commands
         getServer().getPluginManager().registerEvents(new JoinListener(), this);
         getServer().getPluginManager().registerEvents(new LeaveListener(), this);
         getServer().getPluginManager().registerEvents(new AutoPickupListener(), this);
@@ -46,7 +46,7 @@ public final class Rootcore extends JavaPlugin implements CommandExecutor {
         getCommand("rootcorereloadconfig").setExecutor(new ReloadCommand());
         getServer().getPluginManager().registerEvents(new ChatFilterListener(), this);
 
-        // 4. Load holograms from config (Delay by 1 tick to ensure DH is ready)
+        // Load holograms from config (Delay by 1 tick to ensure DH is ready)
         Bukkit.getScheduler().runTaskLater(this, this::loadAndStartLeaderboards, 1L);
     }
 
@@ -67,7 +67,7 @@ public final class Rootcore extends JavaPlugin implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if (!(sender instanceof Player player)) return true;
+        if (!(sender instanceof Player player)) return true; // only useable by players
 
         if (args.length < 2 || !args[0].equalsIgnoreCase("set")) {
             player.sendMessage("§cUsage: /leaderboard set <kills|blocks|playtime>");
@@ -80,7 +80,7 @@ public final class Rootcore extends JavaPlugin implements CommandExecutor {
         getConfig().set("locations." + type, player.getLocation());
         saveConfig();
 
-        // 2. Call the Manager (This will now use the persistence 'true' we added)
+        // 2. Call the Manager
         String holoName = type + "-lb";
         String boardName = type.equals("playtime") ? "statistic_time_played" : "statistic_player_" + type;
         lbManager.createLeaderboard(holoName, player.getLocation(), boardName, "§6§lTOP " + type.toUpperCase());

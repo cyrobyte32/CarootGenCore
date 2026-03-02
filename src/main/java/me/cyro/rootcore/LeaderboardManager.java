@@ -9,6 +9,9 @@ import java.util.List;
 public class LeaderboardManager {
 
     public void createLeaderboard(String name, Location loc, String boardName, String title) {
+
+        // Creates a Leaderboard and saves it to the DecentHolograms Config
+
         List<String> lines = new ArrayList<>();
         lines.add(title);
         lines.add("§7-----------------");
